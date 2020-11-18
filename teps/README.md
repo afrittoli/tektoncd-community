@@ -142,4 +142,4 @@ This is the complete list of Tekton teps:
 |[TEP-0027](0027-https-connection-to-triggers-eventlistener.md) | HTTPS Connection to Triggers EventListener | proposed | 2020-10-19 |
 |[TEP-0028](0028-task-execution-status-at-runtime.md) | task-exec-status-at-runtime | implementable | 2020-11-02 |
 |[TEP-0029](0029-step-workspaces.md) | step-and-sidecar-workspaces | proposed | 2020-10-02 |
-|[TEP-0030](0030-workspace-paths.md) | workspace-paths | proposed | 2020-10-18 |
+|[TEP-0031](0030-workspace-paths.md) | workspace-paths | proposed | 2020-10-18 |
