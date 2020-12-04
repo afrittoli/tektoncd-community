@@ -3,75 +3,96 @@ orgs:
     admins:
     - abayer
     - bobcatfish
-    - caniszczyk
-    - dlorenc
-    - googlebot
-    - mchmarny
     - tekton-robot
     - thelinuxfoundation
     - vdemeester
+    - imjasonh
+    - afrittoli
     billing_email: info@cd.foundation
-    company: ""
-    default_repository_permission: read
-    description: ""
-    email: ""
+    company: ''
+    default_repository_permission: none
+    description: ''
+    email: ''
     has_organization_projects: true
     has_repository_projects: true
-    location: ""
+    location: ''
     members:
     - 16yuki0702
-    - a-roberts
-    - afrittoli
-    - akihikokuroda
-    - arilivigni
     - AlanGreene
+    - CarolynMabbott
+    - EliZucker
+    - FogDong
+    - Megan-Wright
+    - NavidZ
+    - PuneetPunamiya
+    - R2wenD2
+    - YolandaDu1997
+    - a-roberts
+    - akihikokuroda
     - ameyer-pivotal
+    - arilivigni
+    - barthy1
     - bigkevmcd
     - briandealwis
+    - caniszczyk
     - carlos-logro
-    - CarolynMabbott
     - chanseokoh
     - chetan-rns
     - chmouel
     - danielhelfand
     - dibbles
     - dibyom
+    - divyansh42
+    - dlorenc
+    - dorismeixing
     - dwnusbaum
     - eddycharly
     - ekcasey
-    - EliZucker
+    - fhopfensperger
+    - font
     - gabemontero
     - garethr
+    - GregDritschler
     - hone
     - houshengbo
     - hrishin
     - iancoffey
-    - imjasonh
+    - ispasov
     - jerop
     - jessm12
+    - jinchihe
+    - jjasghar
     - jkutner
     - jlpettersson
+    - jonjohnsonjr
     - joseblas
     - jromero
     - khrm
-    - kimsterv
+    - khalkie
     - kimholmes
+    - kimsterv
     - loosebazooka
-    - Megan-Wright
+    - lukehinds
+    - maneeshmehra
+    - mattmoor
+    - mchmarny
     - mnuttall
+    - mpeters
+    - n3wscott
     - nader-ziada
     - navidshaikh
     - ncskier
     - nebhale
     - nikhil-thomas
     - othomann
+    - Peaorl
     - piyush-garg
     - popcor255
     - pradeepitm12
-    - praveen4g0
     - pratap0007
+    - praveen4g0
     - pritidesai
-    - PuneetPunamiya
+    - psschwei
     - raffamendes
     - savitaashture
     - sbwsg
@@ -80,12 +101,532 @@ orgs:
     - shashwathi
     - simonjjones
     - skaegi
+    - skelterjohn
     - skim1420
     - sm43
+    - spikeburton
     - steveodonovan
     - sthaha
+    - Tmoss11
+    - vinamra28
     - vincent-pli
     - vtereso
     - waveywaves
     - withlin
     - wlynch
+    - wumaxd
+    - xinruzhang
+    - yaoxiaoqi
+    - ywluogg
+    - yuege01
+    - ziheng
+    teams:
+      catalog.maintainers:
+        description: the catalog maintainers
+        maintainers:
+        - vdemeester
+        - ImJasonH
+        - bobcatfish
+        members:
+        - kimsterv
+        - dlorenc
+        - sbwsg
+        - chmouel
+        privacy: closed
+        repos:
+          catalog: write
+      chains.maintainers:
+        description: the chains maintainers
+        maintainers:
+        - vdemeester
+        - dlorenc
+        members:
+        - mpeters
+        - skelterjohn
+        - font
+        - lukehinds
+        privacy: closed
+        repos:
+          chains: write
+      cli.maintainers:
+        description: the cli maintainers
+        maintainers:
+        - vdemeester
+        - bobcatfish
+        members:
+        - chmouel
+        - sthaha
+        - piyush-garg
+        - hrishin
+        - danielhelfand
+        - pradeepitm12
+        privacy: closed
+        repos:
+          cli: write
+          homebrew-tools: write
+      core.maintainers:
+        description: the core maintainers team (pipeline)
+        maintainers:
+        - vdemeester
+        - ImJasonH
+        - bobcatfish
+        - afrittoli
+        members:
+        - pritidesai
+        - dlorenc
+        - dibyom
+        - sbwsg
+        privacy: closed
+        repos:
+          pipeline: write
+      dashboard.maintainers:
+        description: the dashboard maintainers
+        maintainers:
+        - bobcatfish
+        - skaegi
+        members:
+        - AlanGreene
+        - mnuttall
+        - a-roberts
+        - dibbles
+        - eddycharly
+        - steveodonovan
+        - carolynmabbott
+        privacy: closed
+        repos:
+          dashboard: write
+      experimental.maintainers:
+        description: the experimental maintainers
+        maintainers:
+        - abayer
+        - bobcatfish
+        - mnuttall
+        members:
+        - skaegi
+        - dlorenc
+        - a-roberts
+        - dibbles
+        privacy: closed
+        repos:
+          experimental: write
+      homebrew.maintainers:
+        description: the homebrew-tools maintainers
+        maintainers:
+        - vdemeester
+        members:
+        - chmouel
+        - danielhelfand
+        privacy: closed
+        repos:
+          homebrew-tools: write
+      hub.maintainers:
+        description: the hub maintainers
+        maintainers:
+        - vdemeester
+        members:
+        - sthaha
+        - pratap0007
+        - PuneetPunamiya
+        - SM43
+        privacy: closed
+        repos:
+          hub: write
+      operator.maintainers:
+        description: the operator maintainers
+        maintainers:
+        - vdemeester
+        members:
+        - houshengbo
+        - sthaha
+        - nikhil-thomas
+        - vincent-pli
+        privacy: closed
+        repos:
+          operator: write
+      plumbing.maintainers:
+        description: the plumbing maintainers
+        maintainers:
+        - vdemeester
+        - abayer
+        - bobcatfish
+        - afrittoli
+        members:
+        - dibyom
+        - dlorenc
+        - jerop
+        - kimsterv
+        - nikhil-thomas
+        - savitaashture
+        - sbwsg
+        - wlynch
+        privacy: closed
+        repos:
+          plumbing: write
+      triggers.maintainers:
+        description: the triggers maintainers
+        maintainers:
+        - bobcatfish
+        members:
+        - iancoffey
+        - dlorenc
+        - khrm
+        - wlynch
+        - dibyom
+        - ncskier
+        - vtereso
+        privacy: closed
+        repos:
+          triggers: write
+      website.maintainers:
+        description: the website maintainers
+        maintainers:
+        - bobcatfish
+        members:
+        - dlorenc
+        - vdemeester
+        - kimsterv
+        - abayer
+        - afrittoli
+        - skaegi
+        - AlanGreene
+        - jjasghar
+        - popcor255
+        privacy: closed
+        repos:
+          website: write
+      core.collaborators:
+        description: The core collaborators
+        maintainers:
+        - bobcatfish
+        members:
+        - sbwsg
+        - savitaashture
+        - barthy1
+        - FogDong
+        - waveywaves
+        - sthaha
+        - abayer
+        - shashwathi
+        - skaegi
+        - nader-ziada
+        - AlanGreene
+        - wlynch
+        - dlorenc
+        - dibbles
+        - pritidesai
+        - jerop
+        - GregDritschler
+        - danielhelfand
+        - jlpettersson
+        - dibyom
+        - Peaorl
+        - piyush-garg
+        - chmouel
+        - psschwei
+        - sergetron
+        - hrishin
+        - ImJasonH
+        - EliZucker
+        - vdemeester
+        - mattmoor
+        - dwnusbaum
+        - othomann
+        - houshengbo
+        - vincent-pli
+        - withlin
+        - afrittoli
+        privacy: closed
+        repos:
+          pipeline: read
+      website.collaborators:
+        description: The website collaborators
+        maintainers:
+        - abayer
+        - ImJasonH
+        members:
+        - jjasghar
+        - AlanGreene
+        - popcor255
+        - afrittoli
+        - sergetron
+        - bobcatfish
+        - vdemeester
+        - skaegi
+        privacy: closed
+        repos:
+          website: read
+      community.collaborators:
+        description: The community collaborators
+        maintainers:
+        - bobcatfish
+        members:
+        - sbwsg
+        - savitaashture
+        - abayer
+        - sthaha
+        - iancoffey
+        - a-roberts
+        - eddycharly
+        - skaegi
+        - pradeepitm12
+        - khrm
+        - pratap0007
+        - kimsterv
+        - AlanGreene
+        - wlynch
+        - dlorenc
+        - CarolynMabbott
+        - dibbles
+        - pritidesai
+        - mnuttall
+        - nikhil-thomas
+        - jerop
+        - SM43
+        - dibyom
+        - danielhelfand
+        - steveodonovan
+        - skelterjohn
+        - chmouel
+        - piyush-garg
+        - vtereso
+        - font
+        - ncskier
+        - ImJasonH
+        - vdemeester
+        - hrishin
+        - lukehinds
+        - PuneetPunamiya
+        - houshengbo
+        - vincent-pli
+        - mpeters
+        - afrittoli
+        privacy: closed
+        repos:
+          community: read
+      dashboard.collaborators:
+        description: The dashboard collaborators
+        maintainers:
+        - abayer
+        - afrittoli
+        - bobcatfish
+        - ImJasonH
+        members:
+        - steveodonovan
+        - Megan-Wright
+        - carlos-logro
+        - AlanGreene
+        - ncskier
+        - CarolynMabbott
+        - dibbles
+        - mnuttall
+        - akihikokuroda
+        - a-roberts
+        - vdemeester
+        - skaegi
+        - jessm12
+        privacy: closed
+        repos:
+          dashboard: read
+      experimental.collaborators:
+        description: The experimental collaborators
+        maintainers:
+        - abayer
+        - afrittoli
+        - bobcatfish
+        members:
+        - carlos-logro
+        - sthaha
+        - iancoffey
+        - a-roberts
+        - yuege01
+        - pratap0007
+        - Megan-Wright
+        - wlynch
+        - dibbles
+        - SM43
+        - mnuttall
+        - YolandaDu1997
+        - ncskier
+        - XinruZhang
+        - akihikokuroda
+        - ImJasonH
+        - vdemeester
+        - jessm12
+        - PuneetPunamiya
+        - dibyom
+        privacy: closed
+        repos:
+          experimental: read
+      plumbing.collaborators:
+        description: The plumbing collaborators
+        maintainers:
+        - abayer
+        - ImJasonH
+        members:
+        - vdemeester
+        - sbwsg
+        - dibyom
+        - danielhelfand
+        - piyush-garg
+        - chmouel
+        - wlynch
+        - dlorenc
+        - savitaashture
+        - SM43
+        - bobcatfish
+        - afrittoli
+        privacy: closed
+        repos:
+          plumbing: read
+      cli.collaborators:
+        description: The cli collaborators
+        maintainers:
+        - abayer
+        - bobcatfish
+        - ImJasonH
+        members:
+        - Divyansh42
+        - pradeepitm12
+        - khrm
+        - vdemeester
+        - danielhelfand
+        - piyush-garg
+        - chmouel
+        - praveen4g0
+        - savitaashture
+        - waveywaves
+        - sthaha
+        - vinamra28
+        - hrishin
+        - afrittoli
+        - 16yuki0702
+        privacy: closed
+        repos:
+          cli: read
+      catalog.collaborators:
+        description: The catalog collaborators
+        maintainers:
+        - abayer
+        - afrittoli
+        members:
+        - sbwsg
+        - jjasghar
+        - iancoffey
+        - yuege01
+        - Divyansh42
+        - pratap0007
+        - dlorenc
+        - fhopfensperger
+        - SM43
+        - navidshaikh
+        - vinamra28
+        - piyush-garg
+        - popcor255
+        - chmouel
+        - akihikokuroda
+        - ImJasonH
+        - vdemeester
+        - PuneetPunamiya
+        - garethr
+        - vincent-pli
+        - bobcatfish
+        privacy: closed
+        repos:
+          catalog: read
+      triggers.collaborators:
+        description: The triggers collaborators
+        maintainers:
+        - abayer
+        - ImJasonH
+        members:
+        - mattmoor
+        - vdemeester
+        - khrm
+        - dibyom
+        - piyush-garg
+        - wlynch
+        - dlorenc
+        - ncskier
+        - iancoffey
+        - savitaashture
+        - bigkevmcd
+        - vincent-pli
+        - akihikokuroda
+        - bobcatfish
+        - dorismeixing
+        - afrittoli
+        - gabemontero
+        privacy: closed
+        repos:
+          triggers: read
+      operator.collaborators:
+        description: The operator collaborators
+        maintainers:
+        - abayer
+        - afrittoli
+        - bobcatfish
+        - ImJasonH
+        members:
+        - houshengbo
+        - nikhil-thomas
+        - vdemeester
+        - vincent-pli
+        privacy: closed
+        repos:
+          operator: read
+      friends.collaborators:
+        description: The friends collaborators
+        maintainers:
+        - abayer
+        - afrittoli
+        - bobcatfish
+        - ImJasonH
+        - vdemeester
+        members: []
+        privacy: closed
+        repos:
+          friends: read
+      homebrew-tools.collaborators:
+        description: The homebrew-tools collaborators
+        maintainers:
+        - abayer
+        - afrittoli
+        - bobcatfish
+        - ImJasonH
+        - vdemeester
+        members:
+        - chmouel
+        privacy: closed
+        repos:
+          homebrew-tools: read
+      hub.collaborators:
+        description: The hub collaborators
+        maintainers:
+        - abayer
+        - afrittoli
+        - bobcatfish
+        - ImJasonH
+        - vdemeester
+        members:
+        - PuneetPunamiya
+        - pratap0007
+        - sthaha
+        - SM43
+        - piyush-garg
+        - vinamra28
+        privacy: closed
+        repos:
+          hub: read
+      chains.collaborators:
+        description: The chains collaborators
+        maintainers:
+        - abayer
+        - afrittoli
+        - bobcatfish
+        - ImJasonH
+        - vdemeester
+        members:
+        - dlorenc
+        privacy: closed
+        repos:
+          chains: read

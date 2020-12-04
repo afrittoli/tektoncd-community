@@ -36,6 +36,7 @@ The current working groups are:
 - [API](#api)
 - [Dashboard](#dashboard)
 - [Catalog and Hub](#catalog-and-hub)
+- [Operator and Deployment](#operator-and-deployment)
 
 ## General
 
@@ -62,12 +63,13 @@ We altenate between two meeting times, a time that is friendly for Europe + Nort
 | Community Meeting Calendar | Wednesdays 9:00am-10:00am PST <br>[Calendar](https://calendar.google.com/event?action=TEMPLATE&tmeid=bjc0aWJqMzVtYm04ZWt2NHJlajJmajdvNGtfMjAxOTA1MjlUMTYwMDAwWiBnb29nbGUuY29tX2Qzb3Zjdm8xcDMyMTloOTg5NTczdjk4Zm5zQGc&tmsrc=google.com_d3ovcvo1p3219h989573v98fns%40group.calendar.google.com&scp=ALL) |
 | Meeting Notes              | [Notes](https://docs.google.com/document/d/1rPR7m1Oj0ip3bpd_bcS1sjZyPgGi_g9asF5YrExeESc)                                                                                                                                                                                                             |
 
-| &nbsp;                                                     | Facilitators      | Company | Profile                                     |
-| --------------------------------------------------------   | ----------        | ------- | ---------------------------------------     |
-| <img width="30px" src="https://github.com/bobcatfish.png"> | Christie Wilson   | Google  | [bobcatfish](https://github.com/bobcatfish) |
-| <img width="30px" src="https://github.com/skaegi.png">     | Simon Kaegi       | IBM     | [skaegi](https://github.com/skaegi)         |
+| &nbsp;                                                     | Facilitators    | Company | Profile                                     |
+| --------------------------------------------------------   | ----------      | ------- | ---------------------------------------     |
+| <img width="30px" src="https://github.com/bobcatfish.png"> | Christie Wilson | Google  | [bobcatfish](https://github.com/bobcatfish) |
+| <img width="30px" src="https://github.com/skaegi.png">     | Simon Kaegi     | IBM     | [skaegi](https://github.com/skaegi)         |
 | <img width="30px" src="https://github.com/dibyom.png">     | Dibyo Mukherjee | Google  | [dibyom](https://github.com/dibyom)         |
-| <img width="30px" src="https://github.com/chhsia0.png">     | Chun-Hung Hsiao | D2iQ  | [chhsia0](https://github.com/chhsia0)         |
+| <img width="30px" src="https://github.com/chhsia0.png">    | Chun-Hung Hsiao | D2iQ    | [chhsia0](https://github.com/chhsia0)       |
+| <img width="30px" src="https://github.com/pritidesai.png"> | Priti Desai     | IBM     | [pritidesai](https://github.com/pritidesai) |
 
 ### Europe + Asia
 
@@ -91,18 +93,18 @@ This is the [`tektoncd/triggers`](https://github.com/tektoncd/triggers) working 
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------                                                                             |
 | Forum                      | [tekton-dev@](https://groups.google.com/forum/#!forum/tekton-dev)                                                                                                                                                                         |
 | Community Meeting VC       | [https://meet.google.com/oqm-imjh-uzu](https://meet.google.com/oqm-imjh-uzu)                                                                                                                                                              |
-| Community Meeting Calendar | Tuesdays every week, 12:00p-12:30p PST <br>[Calendar](https://calendar.google.com/event?action=TEMPLATE&tmeid=ZmNmbWtnNGxzcG1uaGUwNm9rMHB1MzR2ZnJfMjAyMDAxMjhUMTcwMDAwWiBnb29nbGUuY29tX2Qzb3Zjdm8xcDMyMTloOTg5NTczdjk4Zm5zQGc&tmsrc=google.com_d3ovcvo1p3219h989573v98fns%40group.calendar.google.com&scp=ALL) |
+| Community Meeting Calendar | Wednesdays every week, 11:00p-11:30p EST <br>[Calendar](https://calendar.google.com/event?action=TEMPLATE&tmeid=ZDA3YzZldXZqZ2M1ajBndWVkNzRlNTdzN2ZfMjAyMDExMThUMTYwMDAwWiBnb29nbGUuY29tX2Qzb3Zjdm8xcDMyMTloOTg5NTczdjk4Zm5zQGc&tmsrc=google.com_d3ovcvo1p3219h989573v98fns%40group.calendar.google.com&scp=ALL) |
 | Meeting Notes              | [Notes](https://docs.google.com/document/d/1T87yK4BIu291gGK1L2ZzDpesGCnXX3tGuWXjdr5Soxw/edit)                                                                                                                                             |
 | Document Folder            | [Folder](https://drive.google.com/drive/folders/1-UOR-sodtMeYqtUEzVW12nkfJCr7EQRO)                                                                                                                                                        |
 | Slack Channel              | [#triggers](https://tektoncd.slack.com/messages/triggers)                                                                                                                                                                                 |
 
 
-| &nbsp;                                                     | Facilitators    | Company | Profile                                     |
-| --------------------------------------------------------   | ----------      | ------- | ---------------------------------------     |
-| <img width="30px" src="https://github.com/wlynch.png">     | Billy Lynch     | Google  | [wlynch](https://github.com/wlynch)         |
-| <img width="30px" src="https://github.com/dibyom.png">     | Dibyo Mukherjee | Google  | [dibyom](https://github.com/dibyom)         |
-| <img width="30px" src="https://github.com/vtereso.png">    | Vincent Tereso  | IBM     | [vtereso](https://github.com/vtereso)       |
-| <img width="30px" src="https://github.com/ncskier.png">    | Brandon Walker  | IBM     | [ncskier](https://github.com/ncskier)       |
+| &nbsp;                                                           | Facilitators    | Company     | Profile                                                 |
+| --------------------------------------------------------         | ----------      | -------     | ---------------------------------------                 |
+| <img width="30px" src="https://github.com/wlynch.png">           | Billy Lynch     | Google      | [wlynch](https://github.com/wlynch)                     |
+| <img width="30px" src="https://github.com/dibyom.png">           | Dibyo Mukherjee | Google      | [dibyom](https://github.com/dibyom)                     |
+| <img width="30px" src="https://github.com/khrm.png">             | Khurram Baig    | Red Hat     | [khrm](https://github.com/khrm)                         |
+| <img width="30px" src="https://github.com/savitaashture.png">    | Savita Asthure  | Red Hat     | [savitaashture](https://github.com/savitaashture)       |
 
 ## CLI
 
@@ -118,11 +120,12 @@ This is the [`tektoncd/cli`](https://github.com/tektoncd/cli) working group.
 | Slack Channel              | [#cli](https://tektoncd.slack.com/messages/cli)                                                                                                                                                                             |
 
 
-| &nbsp;                                                        | Facilitators      | Company | Profile                                           |
-| --------------------------------------------------------      | ----------        | ------- | ---------------------------------------           |
-| <img width="30px" src="https://github.com/vdemeester.png">    | Vincent Demeester | Red Hat | [vdemeester](https://github.com/vdemeester)       |
-| <img width="30px" src="https://github.com/chmouel.png">       | Chmouel Boudjnah  | Red Hat | [chmouel](https://github.com/chmouel)             |
-| <img width="30px" src="https://github.com/danielhelfand.png"> | Daniel Helfand    | VMware  | [danielhelfand](https://github.com/danielhelfand) |
+| &nbsp;                                                        | Facilitators     | Company | Profile                                           |
+| --------------------------------------------------------      | ----------       | ------- | ---------------------------------------           |
+| <img width="30px" src="https://github.com/chmouel.png">       | Chmouel Boudjnah | Red Hat | [chmouel](https://github.com/chmouel)             |
+| <img width="30px" src="https://github.com/danielhelfand.png"> | Daniel Helfand   | VMware  | [danielhelfand](https://github.com/danielhelfand) |
+| <img width="30px" src="https://github.com/pradeepitm12.png">  | Pradeep Kumar    | Red Hat | [pradeepitm12](https://github.com/pradeepitm12)   |
+| <img width="30px" src="https://github.com/pgarg.png">         | Piyush Garg      | Red Hat | [piyush-garg](https://github.com/piyush-garg)     |
 
 ## Documentation
 
@@ -140,14 +143,12 @@ repository that need to expose documentation.
 | Slack Channel              | [#docs](https://tektoncd.slack.com/messages/docs)                                                                                                                                                                                            |
 
 
-| &nbsp;                                                     | Facilitators      | Company | Profile                                     |
-| --------------------------------------------------------   | ----------        | ------- | ---------------------------------------     |
-| <img width="30px" src="https://github.com/kimsterv.png">   | Kim Lewandowski   | Google  | [kimsterv](https://github.com/kimsterv)     |
-| <img width="30px" src="https://github.com/spomorski.png">  | Serge Pomorski    | Google  | [spomorski](https://github.com/spomorski)   |
-| <img width="30px" src="https://github.com/vdemeester.png"> | Vincent Demeester | Red Hat | [vdemeester](https://github.com/vdemeester) |
-| <img width="30px" src="https://github.com/anneqm.png"> | Anne Michalak | IBM | [anneqm](https://github.com/anneqm) |
-| <img width="30px" src="https://github.com/popcor255.png"> | Napoleon Santana | IBM | [popcor255](https://github.com/popcor255) |
-| <img width="30px" src="https://github.com/AlanGreene.png">    | Alan Greene     | IBM     | [AlanGreene](https://github.com/AlanGreene)
+| &nbsp;                                                     | Facilitators     | Company | Profile                                     |
+| --------------------------------------------------------   | ----------       | ------- | ---------------------------------------     |
+| <img width="30px" src="https://github.com/sergetron.png">  | Serge Pomorski   | Google  | [sergetron](https://github.com/sergetron)   |
+| <img width="30px" src="https://github.com/anneqm.png">     | Anne Michalak    | IBM     | [anneqm](https://github.com/anneqm)         |
+| <img width="30px" src="https://github.com/popcor255.png">  | Napoleon Santana | IBM     | [popcor255](https://github.com/popcor255)   |
+| <img width="30px" src="https://github.com/AlanGreene.png"> | Alan Greene      | IBM     | [AlanGreene](https://github.com/AlanGreene) |
 
 ## Productivity
 
@@ -167,11 +168,13 @@ aspect of this working group for now is **dogfooding**.
 
 
 
-| &nbsp;                                                     | Facilitators      | Company | Profile                                     |
-| --------------------------------------------------------   | ----------        | ------- | ---------------------------------------     |
-| <img width="30px" src="https://github.com/vdemeester.png"> | Vincent Demeester | Red Hat | [vdemeester](https://github.com/vdemeester) |
-| <img width="30px" src="https://github.com/afrittoli.png">  | Andrea Frittoli   | IBM     | [afrittoli](https://github.com/afrittoli)   |
-| <img width="30px" src="https://github.com/bobcatfish.png"> | Christie Wilson   | Google  | [bobcatfish](https://github.com/bobcatfish) |
+| &nbsp;                                                        | Facilitators      | Company | Profile                                           |
+| --------------------------------------------------------      | ----------        | ------- | ---------------------------------------           |
+| <img width="30px" src="https://github.com/vdemeester.png">    | Vincent Demeester | Red Hat | [vdemeester](https://github.com/vdemeester)       |
+| <img width="30px" src="https://github.com/afrittoli.png">     | Andrea Frittoli   | IBM     | [afrittoli](https://github.com/afrittoli)         |
+| <img width="30px" src="https://github.com/bobcatfish.png">    | Christie Wilson   | Google  | [bobcatfish](https://github.com/bobcatfish)       |
+| <img width="30px" src="https://github.com/savitaashture.png"> | Savita Asthure    | Red Hat | [savitaashture](https://github.com/savitaashture) |
+| <img width="30px" src="https://github.com/nikhil-thomas.png"> | Nikhil Thomas     | Red Hat | [nikhil-thomas](https://github.com/nikhil-thomas) |
 
 ## API
 
@@ -189,15 +192,15 @@ Tekton projects.
 
 
 
-| &nbsp;                                                     | Facilitators    | Company | Profile                                     |
-| --------------------------------------------------------   | ----------      | ------- | ---------------------------------------     |
-| <img width="30px" src="https://github.com/bobcatfish.png"> | Christie Wilson | Google  | [bobcatfish](https://github.com/bobcatfish) |
+| &nbsp;                                                     | Facilitators      | Company | Profile                                     |
+| --------------------------------------------------------   | ----------        | ------- | ---------------------------------------     |
+| <img width="30px" src="https://github.com/bobcatfish.png"> | Christie Wilson   | Google  | [bobcatfish](https://github.com/bobcatfish) |
 | <img width="30px" src="https://github.com/vdemeester.png"> | Vincent Demeester | Red Hat | [vdemeester](https://github.com/vdemeester) |
-| <img width="30px" src="https://github.com/afrittoli.png">  | Andrea Frittoli   | IBM     | [afrittoli](https://github.com/afrittoli) |
-| <img width="30px" src="https://github.com/skaegi.png"> | Simon Kaegi | IBM | [skaegi](https://github.com/skaegi) |
-| <img width="30px" src="https://github.com/dibyom.png">     | Dibyo Mukherjee | Google  | [dibyom](https://github.com/dibyom)         |
-| <img width="30px" src="https://github.com/chhsia0.png">     | Chun-Hung Hsiao | D2iQ  | [chhsia0](https://github.com/chhsia0)         |
-| <img width="30px" src="https://github.com/pritidesai.png">     | Priti Desai | IBM  | [pritidesai](https://github.com/pritidesai)         |
+| <img width="30px" src="https://github.com/afrittoli.png">  | Andrea Frittoli   | IBM     | [afrittoli](https://github.com/afrittoli)   |
+| <img width="30px" src="https://github.com/skaegi.png">     | Simon Kaegi       | IBM     | [skaegi](https://github.com/skaegi)         |
+| <img width="30px" src="https://github.com/dibyom.png">     | Dibyo Mukherjee   | Google  | [dibyom](https://github.com/dibyom)         |
+| <img width="30px" src="https://github.com/chhsia0.png">    | Chun-Hung Hsiao   | D2iQ    | [chhsia0](https://github.com/chhsia0)       |
+| <img width="30px" src="https://github.com/pritidesai.png"> | Priti Desai       | IBM     | [pritidesai](https://github.com/pritidesai) |
 
 
 ## Dashboard
@@ -236,7 +239,30 @@ This is the working group for [`tektoncd/catalog`](https://github.com/tektoncd/c
 | Slack Channels             | [#catalog](https://tektoncd.slack.com/messages/catalog) and [#hub](https://tektoncd.slack.com/messages/hub)                                                                                                                               |
 
 
-| &nbsp;                                                        | Facilitators    | Company | Profile                                            |
-| -----------------------------------------------------------   | ----------      | ------- | ------------------------------------------------   |
-| <img width="30px" src="https://github.com/vdemeester.png"> | Vincent Demeester | Red Hat | [vdemeester](https://github.com/vdemeester) |
-| <img width="30px" src="https://github.com/bobcatfish.png"> | Christie Wilson | Google  | [bobcatfish](https://github.com/bobcatfish) |
+| &nbsp;                                                        | Facilitators      | Company | Profile                                            |
+| -----------------------------------------------------------   | ----------        | ------- | ------------------------------------------------   |
+| <img width="30px" src="https://github.com/vdemeester.png">    | Vincent Demeester | Red Hat | [vdemeester](https://github.com/vdemeester)        |
+| <img width="30px" src="https://github.com/bobcatfish.png">    | Christie Wilson   | Google  | [bobcatfish](https://github.com/bobcatfish)        |
+| <img width="30px" src="https://github.com/chmouel.png">       | Chmouel Boudjnah  | Red Hat | [chmouel](https://github.com/chmouel)              |
+| <img width="30px" src="https://github.com/afrittoli.png">     | Andrea Frittoli   | IBM     | [afrittoli](https://github.com/afrittoli)          |
+
+## Operator and Deployment
+
+This is the working group for [`tektoncd/operator`](https://github.com/tektoncd/operator)
+
+| Artifact                   | Link                                                                                                                                                                                                                                      |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------                                                                             |
+| Forum                      | [tekton-dev@](https://groups.google.com/forum/#!forum/tekton-dev)                                                                                                                                                                         |
+| Community Meeting VC       | [https://meet.google.com/zzp-gzmd-dys](https://meet.google.com/zzp-gzmd-dys)                                                                                                                                                              |
+| Community Meeting Calendar | Thursdays every week, 4am -4:30am PST <br>[Calendar](https://calendar.google.com/event?action=TEMPLATE&tmeid=NzFzcWhkOGk2MWNzMTI0cGg3MDA4YmUzMHZfMjAyMDA1MTRUMTczMDAwWiBjaHJpc3RpZXdpbHNvbkBnb29nbGUuY29t&tmsrc=christiewilson%40google.com&scp=ALL) |
+| Meeting Notes              | [Notes](https://docs.google.com/document/d/1mMbwPCTzDCRgr0FNtv8TJaKDfiOfD9pgz1zFmncZReg/edit)                                                                                                                                             |
+| Slack Channels             | [#operator](https://tektoncd.slack.com/messages/operator)                                                                                                                              |
+
+
+| &nbsp;                                                        | Facilitators  | Company | Profile                                           |
+| -----------------------------------------------------------   | ----------    | ------- | ------------------------------------------------  |
+| <img width="30px" src="https://github.com/nikhil-thomas.png"> | Nikhil Thomas | Red Hat | [nikhil-thomas](https://github.com/nikhil-thomas) |
+| <img width="30px" src="https://github.com/houshengbo.png">    | Vincent Hou   | IBM     | [houshengbo](https://github.com/houshengbo)       |
+| <img width="30px" src="https://github.com/khrm.png">          | Khurram Baig  | Red Hat | [khrm](https://github.com/khrm)                   |
+| <img width="30px" src="https://github.com/pgarg.png">         | Piyush Garg   | Red Hat | [piyush-garg](https://github.com/piyush-garg)     |
+| <img width="30px" src="https://github.com/sthaha.png">        | Sunil Thaha   | Red Hat | [sthaha](https://github.com/sthaha)               |
