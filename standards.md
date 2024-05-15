@@ -28,7 +28,7 @@ Each Pull Request is expected to meet the following expectations around:
   * [Tests](#tests)
   * [Reconciler/Controller Changes](#reconcilercontroller-changes)
 
-_See also [the Tekton review process](https://github.com/tektoncd/community/blob/main/process.md#reviews)._
+_See also [the Tekton review process](https://github.com/tektoncd/community/blob/main/process/README.md#reviews)._
 
 ## Reviewer Responsibilities
 
@@ -50,6 +50,7 @@ _See also [the Tekton review process](https://github.com/tektoncd/community/blob
     * Please refer the [release-note](#release-notes) section for more details.
 * Add the related [TEP-XXXX] at the beginning of a PR subject line
   * Consider adding the links of the related TEP, Feature Request thread, and related other implementation PRs
+* The changes section should ideally be straight from the descriptive commit message that follows [the commit message standards](#commit-messages).
 * Add the Milestones to the pull request or the issue
   * For tracking the status of each Milestone, please link to the Milestones if the pull request or the issue targets specific releases.
 
@@ -218,8 +219,8 @@ PRs must adhere to the project's API stability policy.
 * Include Markdown doc updates for user visible features
 * Spelling and grammar should be correct
 * Try to make formatting look as good as possible (use preview mode to check)
-* Follow [content](https://github.com/tektoncd/website/blob/main/content/en/doc-con-content.md)
-  and [formatting](https://github.com/tektoncd/website/blob/main/content/en/doc-con-formatting.md) guidelines
+* Follow [content](https://github.com/tektoncd/website/blob/main/content/en/docs/Contribute/doc-con-content.md)
+  and [formatting](https://github.com/tektoncd/website/blob/main/content/en/docs/Contribute/doc-con-formatting.md) guidelines
 * Should explain thoroughly how the new feature works
 * If possible, in addition to code snippets, include a reference to an end to end example
 * Ensure that all links and references are valid

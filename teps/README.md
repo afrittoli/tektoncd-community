@@ -83,7 +83,7 @@ This is the complete list of Tekton TEPs:
 |[TEP-0088](0088-result-summaries.md) | Tekton Results - Record Summaries | proposed | 2021-10-01 |
 |[TEP-0089](0089-nonfalsifiable-provenance-support.md) | Non-falsifiable provenance support | implementable | 2022-01-18 |
 |[TEP-0090](0090-matrix.md) | Matrix | implemented | 2022-06-30 |
-|[TEP-0091](0091-trusted-resources.md) | Trusted Resources | implementable | 2023-02-23 |
+|[TEP-0091](0091-trusted-resources.md) | Trusted Resources | implementable | 2023-06-06 |
 |[TEP-0092](0092-scheduling-timeout.md) | Scheduling Timeout | deferred | 2023-02-24 |
 |[TEP-0093](0093-add-sign-verify-subcommand-to-the-cli.md) | Add sign and verify subcommand to the CLI | proposed | 2022-10-05 |
 |[TEP-0094](0094-configuring-resources-at-runtime.md) | Configuring Resources at Runtime | implemented | 2022-03-11 |
@@ -118,10 +118,12 @@ This is the complete list of Tekton TEPs:
 |[TEP-0125](0125-add-credential-filter-to-entrypoint-logger.md) | Add credential filter to entrypoint logger | proposed | 2022-10-27 |
 |[TEP-0127](0127-larger-results-via-sidecar-logs.md) | Larger Results via Sidecar Logs | implemented | 2022-12-15 |
 |[TEP-0128](0128-scheduled-runs.md) | Scheduled Runs | implementable | 2022-12-20 |
-|[TEP-0129](0129-multiple-tekton-instances-per-cluster.md) | Multiple Tekton instances per cluster | proposed | 2023-01-11 |
+|[TEP-0129](0129-multiple-tekton-instances-per-cluster.md) | Multiple Tekton instances per cluster | implementable | 2023-03-30 |
 |[TEP-0130](0130-pipeline-level-service.md) | Pipeline-level Service | proposed | 2023-02-21 |
 |[TEP-0131](0131-tekton-conformance-policy.md) | Tekton Conformance Policy | proposed | 2023-02-14 |
 |[TEP-0132](0132-queueing-concurrent-runs.md) | Queueing Concurrent Runs | proposed | 2023-03-20 |
 |[TEP-0133](0133-configure-default-resolver.md) | Configure Default Resolver | implemented | 2023-03-21 |
 |[TEP-0134](0134-concise-pipelines.md) | Concise Pipelines | proposed | 2023-04-28 |
-|[TEP-0135](0135-coscheduling-pipelinerun-pods.md) | Coscheduling PipelineRun pods | implementable | 2023-05-02 |
+|[TEP-0135](0135-coscheduling-pipelinerun-pods.md) | Coscheduling PipelineRun pods | implementable | 2023-06-22 |
+|[TEP-0136](0136-capture-traces-for-task-pod-events.md) | Capture traces for task pod events | proposed | 2023-06-14 |
+|[TEP-0137](0137-cloudevents-controller.md) | CloudEvents controller | proposed | 2023-06-19 |

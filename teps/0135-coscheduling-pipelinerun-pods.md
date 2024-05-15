@@ -2,7 +2,7 @@
 status: implementable
 title: Coscheduling PipelineRun pods
 creation-date: '2023-05-01'
-last-updated: '2023-05-02'
+last-updated: '2023-06-22'
 authors:
 - '@lbernick'
 - '@QuanZhang-William'
@@ -44,6 +44,7 @@ collaborators: []
   - [Inter-pod affinity between all but 1 TaskRun](#inter-pod-affinity-between-all-but-1-taskrun)
   - [Turn off repelling behavior of existing affinity assistant](#turn-off-repelling-behavior-of-existing-affinity-assistant)
   - [Kubernetes scheduler plugin](#kubernetes-scheduler-plugin)
+- [Implementation Plan](#implementation-plan)
   - [Test Plan](#test-plan)
   - [Upgrade and Migration Strategy](#upgrade-and-migration-strategy)
   - [Implementation Pull Requests](#implementation-pull-requests)
@@ -136,17 +137,84 @@ PipelineRun pods can be scheduled to the same node using a mechanism similar to 
 
 Currently, the affinity assistant is enabled by default, and disabled by setting the boolean feature flag "disable-affinity-assistant" to true.
 
-This TEP proposes creating a new feature flag, "coscheduling". The options will be:
-- "disabled": The default value.
-- "coschedule-workspaces": The existing affinity assistant behavior. This option runs all of a PipelineRun's pods sharing the same workspace on the same node.
-- "coschedule-pipelineruns": This option runs all of a PipelineRun's pods on the same node.
-- "isolate-pipelineruns": This option runs all of a PipelineRun's pods on the same node, and only allows one PipelineRun to run on a node at a time. This option is intended for use in clusters where a cluster autoscaler scales the number of nodes up and down.
+This TEP proposes creating a new feature flag, "coschedule". The options will be:
+- "workspaces": The default value. The existing affinity assistant behavior. This option runs all of a PipelineRun's pods sharing the same workspace on the same node.
+- "disabled": Pod coscheduling feature is disabled.
+- "pipelineruns": This option runs all of a PipelineRun's pods on the same node.
+- "isolate-pipelinerun": This option runs all of a PipelineRun's pods on the same node, and only allows one PipelineRun to run on a node at a time. This option is intended for use in clusters where a cluster autoscaler scales the number of nodes up and down.
 
-If the existing affinity assistant is enabled, the "coscheduling" flag must be set to "disabled". We will deprecate the "disable-affinity-assistant" flag in favor of the "coscheduling" flag, as discussed in ["Upgrade and Migration Strategy"](#upgrade-and-migration-strategy).
+If the existing affinity assistant is enabled, the "coschedule" flag must be set to "workspaces". We will deprecate the "disable-affinity-assistant" flag in favor of the "coschedule" flag, as discussed in ["Upgrade and Migration Strategy"](#upgrade-and-migration-strategy).
+
+The following chart summarizes the affinity assistant behaviors with different combinations of the "disable-affinity-assistant" and "coschedule" feature flags during migration (when both feature flags are present) and after the migration (when only the "coschedule" flag is present):
+
+<table>
+    <thead>
+        <tr>
+            <th>disable-affinity-assistant</th>
+            <th>coschedule</th>
+            <th>behavior during migration</th>
+            <th>behavior after migration</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>false (default)</td>
+            <td>disabled</td>
+            <td>N/A: invalid</td>
+            <td>disabled</td>
+        </tr>
+        <tr>
+            <td>false (default)</td>
+            <td>workspaces (default)</td>
+            <td>coschedule workspaces</td>
+            <td>coschedule workspaces</td>
+        </tr>
+        <tr>
+            <td>false (default)</td>
+            <td>pipelineruns</td>
+            <td>N/A: invalid</td>
+            <td>coschedule pipelineruns</td>
+        </tr>
+        <tr>
+            <td>false (default)</td>
+            <td>isolate-pipelinerun</td>
+            <td>N/A: invalid</td>
+            <td>isolate pipelineruns</td>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>disabled</td>
+            <td>disabled</td>
+            <td>disabled</td>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>workspaces (default)</td>
+            <td>disabled</td>
+            <td>coschedule workspaces</td>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>pipelineruns</td>
+            <td>coschedule pipelineruns</td>
+            <td>coschedule pipelineruns</td>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>isolate-pipelinerun</td>
+            <td>isolate pipelineruns</td>
+            <td>isolate pipelineruns</td>
+        </tr>
+    </tbody>
+</table>
+
+This configuration preserves the default affinity assistant behavior ("coschedule workspaces") before and after the migration. During the migration, if users want to turn off affinity assistant, they can optionally set “coschedule” to “disabled” so that removal of affinity assistant flag has no impact on them.
+
+One alternative is to use "disabled" as the default value for the "coschedule" feature flag. However, it changes the default affinity assistant behavior to "disabled" after the migration. This change could introduce further complexity if we want to modify the default behavior to "pipelineruns" based on users' feedback when promoting this feature to beta. Another disadvantage of this alternative is that it makes confusion when setting "disabled-affinity-assistant" to "true" while setting "coschedule" to "workspaces".
 
 ### Placeholder pod + inter-pod affinity
 
-The proposed implementation is very similar to the existing affinity assistant. Using a [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/), the PipelineRun controller will create a placeholder pod per PipelineRun. All TaskRun pods will be modified to have inter-pod affinity for the placeholder pod. If the "isolate-pipelineruns" configuration option is chosen, the placeholder pod will have inter-pod anti-affinity for other placeholder pods. The placeholder pod does nothing, has minimal resource requirements, and is torn down on PipelineRun completion.
+The proposed implementation is very similar to the existing affinity assistant. Using a [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/), the PipelineRun controller will create a placeholder pod per PipelineRun. All TaskRun pods will be modified to have inter-pod affinity for the placeholder pod. If the "isolate-pipelinerun" configuration option is chosen, the placeholder pod will have inter-pod anti-affinity for other placeholder pods. The placeholder pod does nothing, has minimal resource requirements, and is torn down on PipelineRun completion.
 
 #### Example: Coscheduling a PipelineRun
 
@@ -385,16 +453,17 @@ The existing affinity assistant repels other affinity assistants to more evenly 
 
 We could build a kubernetes scheduler plugin responsible for coscheduling PipelineRun pods, and cluster operators could install it separately from Tekton Pipelines. This option was prototyped [here](https://github.com/lbernick/scheduler) using the [Kubernetes scheduler framework](https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/). While this works, it's hard to debug, may need to run alongside the existing scheduler, and may have unexpected interactions with cluster autoscalers (see [autoscaler#4518](https://github.com/kubernetes/autoscaler/issues/4518)).
 
+## Implementation Plan
 ### Test Plan
 
 E2E tests should be added, covering PipelineRuns where multiple PVC workspaces are used in the same Pipeline Task.
 
 ### Upgrade and Migration Strategy
 
-As mentioned in ["Configuration"](#configuration), we'll need to replace the "disable-affinity-assistant" flag with the "coscheduling" flag. The steps are as follows:
+As mentioned in ["Configuration"](#configuration), we'll need to replace the "disable-affinity-assistant" flag with the "coschedule" flag. The steps are as follows:
 
-1. Coscheduling introduced as an alpha feature. Options for the "coscheduling" flag are "disabled" (default), "coschedule-pipelineruns", and "isolate-pipelineruns". The "disable-affinity-assistant" flag is announced as deprecated. If "disable-affinity-assistant" is set to "false", "coscheduling" must be set to "disabled", since the options for coscheduling are incompatible with the existing affinity assistant.
-1. After 9 months, or as part of a v1.0 software release (whichever happens first), the "disable-affinity-assistant" flag will be removed and replaced with a new "coscheduling" option "coschedule-workspaces" in the same release. The "coscheduling" flag will be set to "disabled" by default.
+1. Coscheduling introduced as an alpha feature. Options for the "coschedule" flag are "workspaces" (default), "disabled", "pipelineruns", and "isolate-pipelinerun". The "disable-affinity-assistant" flag is announced as deprecated. If "disable-affinity-assistant" is set to "false", "coschedule" must be set to "workspaces", since the options for coscheduling are incompatible with the existing affinity assistant. When promiting this feature to beta, we may consider making "pipelineruns" as the default value instead based on users' feedback.
+2. After 9 months, the "disable-affinity-assistant" flag will be removed and the affinity assistant behavior will be only determined by the "coschedule" feature flags.
 
 ### Implementation Pull Requests
 
